@@ -1,5 +1,4 @@
 require 'json'
-require 'colored'
 
 class Tuml
   class Generator
