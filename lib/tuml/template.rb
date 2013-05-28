@@ -14,6 +14,7 @@ class Tuml
     end
 
     def tokens(src = @source)
+      src = src.to_s.encode('UTF-16', 'UTF-8', :invalid => :replace, :replace => '').encode('UTF-8', 'UTF-16')
       Parser.new(src).compile
     end
 

@@ -10,25 +10,28 @@ class Tuml
     end
 
     def self.tag(name, &blk)
-      prototype[name] = block_given? ? blk : -> { data[name]}
+      prototype[name.to_s] = block_given? ? blk : -> { data[name]}
     end
 
     def self.block(name, klass=nil, &blk)
       prototype["block:#{name}"] = blk
     end
 
-
     def initialize(data)
       @data = data
     end
 
     def find(name)
-      method = self.class.prototype[name]
+      method = self.class.prototype[name.to_s]
       if method
         instance_exec &method
       elsif parent
         parent.find(name)
       end
+    end
+
+    def block(name)
+      find("block:#{name}")
     end
 
     # TODO: Rename this method

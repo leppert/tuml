@@ -32,6 +32,11 @@ class Tuml
   #   self.post = args[:post]
   # end
 
+  def initialize args={}
+    super
+    data['tags'] ||= []
+  end
+
   def collection
     raw['posts']
   end
@@ -319,7 +324,7 @@ class Tuml
 
   # Rendered for each of a post's tags.
   block 'Tags' do
-    post['tags'].map {|name| Tag.new(prototype: self, name: name)}
+    data['tags'].map {|name| Tag.new(prototype: self, name: name)}
   end
 
   class Tag < Context
