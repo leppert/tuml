@@ -6,7 +6,7 @@ class Tuml
     RSS_PATH = '/rss'
     DUMMY_CUSTOM_CSS = "#rollrdummy {};"
 
-  AVATAR_SIZES = [16, 24, 30, 40, 48, 64, 96, 128, 512]
+    AVATAR_SIZES = [16, 24, 30, 40, 48, 64, 96, 128, 512]
 
     ## Basic Variables
 

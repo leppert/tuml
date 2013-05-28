@@ -6,7 +6,7 @@ class Tuml
     attr_accessor :parent
 
     def self.prototype
-      @prototype ||= {}
+      @prototype ||= superclass.prototype.clone rescue {}
     end
 
     def self.tag(name, &blk)

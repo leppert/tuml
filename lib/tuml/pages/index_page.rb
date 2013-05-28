@@ -20,7 +20,6 @@ class Tuml
       # start_index = (POSTS_PER_PAGE * page) - 1
       # end_index = [start_index + POSTS_PER_PAGE, data['posts'].length].min
       data['posts'].map do |post|
-
         Post.for(post)
       end
     end
