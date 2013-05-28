@@ -6,6 +6,11 @@ class Tuml
       true
     end
 
+    # Legacy support.
+    block 'Regular' do
+      true
+    end
+
     # Rendered if there is a title for this post.
     block 'Title' do
       data['title'] != ''

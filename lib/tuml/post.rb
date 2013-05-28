@@ -7,12 +7,12 @@ class Tuml
 
   def self.for data
     # base = self.new(args)
-    case data['type']
+    case data['type'].downcase
       when 'answer'
         AnswerPost
       when 'audio'
         AudioPost
-      when 'chat'
+      when 'chat','conversation'
         ChatPost
       when 'link'
         LinkPost
@@ -20,7 +20,7 @@ class Tuml
         PhotoPost
       when 'quote'
         QuotePost
-      when 'text'
+      when 'text','regular'
         TextPost
       when 'video'
         VideoPost
