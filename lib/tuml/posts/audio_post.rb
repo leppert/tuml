@@ -26,7 +26,9 @@ class Tuml
       end
     end
 
-    block 'AudioPlayer'
+    block 'AudioPlayer' do
+      !tag_isnt_blank('AudioEmbed') && tag_isnt_blank('AudioPlayer')
+    end
 
     # Default audio player.
     tag 'AudioPlayer' do
