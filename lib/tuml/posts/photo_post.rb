@@ -67,7 +67,7 @@ class Tuml
 
     # Rendered if there is a high-res photo for this post.
     block 'HighRes' do
-      data['photos'].first['alt_sizes'].exist? {|p| p['width'] == 1280}
+      data['photos'].first['alt_sizes'].any? {|p| p['width'] == 1280}
     end
 
     # URL for the high-res photo of this post. Rendered if there is high-res
