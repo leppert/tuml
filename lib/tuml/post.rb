@@ -1,7 +1,7 @@
 class Tuml
   class Post < Context
 
-  AVATAR_SIZES = [16, 24, 30, 40, 48, 64, 96, 128, 512]
+  PORTRAIT_SIZES = [16, 24, 30, 40, 48, 64, 96, 128, 512]
 
   attr_accessor :collection, :post
 
@@ -293,7 +293,7 @@ class Tuml
   tag 'ReblogParentURL'
   # The URL for the blog this post was reblogged from.
 
-  AVATAR_SIZES.each do |n|
+  PORTRAIT_SIZES.each do |n|
     # Portrait photo URL for the blog this post was reblogged from.
     # #{n}-pixels by #{n}-pixels.
     tag "ReblogParentPortraitURL-#{n}"
@@ -309,7 +309,7 @@ class Tuml
   tag 'ReblogRootURL'
   # The URL for the blog this post was created by.
 
-  AVATAR_SIZES.each do |n|
+  PORTRAIT_SIZES.each do |n|
     # Portrait photo URL for the blog this post was created by. #{n}-pixels
     # by #{n}-pixels.
     tag "ReblogRootPortraitURL-#{n}"

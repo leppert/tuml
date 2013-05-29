@@ -23,7 +23,7 @@ class Tuml
     end
 
     # Portrait photo URL for the asker.
-    AVATAR_SIZES.each do |size|
+    PORTRAIT_SIZES.each do |size|
       tag "AskerPortraitURL-#{size}" do
         # TODO
       end

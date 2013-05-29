@@ -6,7 +6,7 @@ class Tuml
     RSS_PATH = '/rss'
     DUMMY_CUSTOM_CSS = "#rollrdummy {};"
 
-    AVATAR_SIZES = [16, 24, 30, 40, 48, 64, 96, 128, 512]
+    PORTRAIT_SIZES = [16, 24, 30, 40, 48, 64, 96, 128, 512]
 
     ## Basic Variables
 
@@ -43,9 +43,9 @@ class Tuml
 
 
     # Portrait photo URL for your blog.
-    AVATAR_SIZES.each do |size|
+    PORTRAIT_SIZES.each do |size|
       tag "PortraitURL-#{size}" do
-        "http://api.tumblr.com/v2/chrislloyd.com.au/avatar/#{size}"
+        data["PortraitURL-#{size}"]
       end
     end
 
@@ -73,7 +73,7 @@ class Tuml
       tag 'FollowedURL'
 
       # Portrait photo URL for the blog you're following.
-      AVATAR_SIZES.each do |n|
+      PORTRAIT_SIZES.each do |n|
         tag "FollowedPortraitURL-#{n}"
       end
     end
@@ -102,7 +102,7 @@ class Tuml
       tag 'GroupMemberURL'
 
       # Portrait photo URL for the member.
-      AVATAR_SIZES.each do |n|
+      PORTRAIT_SIZES.each do |n|
         tag "GroupMemberPortraitURL-#{n}"
       end
     end
