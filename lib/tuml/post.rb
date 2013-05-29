@@ -38,7 +38,8 @@ class Tuml
   end
 
   def collection
-    raw['posts']
+    [data]
+    #raw['posts']
   end
 
   ## Basic Variables
