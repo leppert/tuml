@@ -24,9 +24,7 @@ class Tuml
     end
 
     # Rendered if there is a description for this post.
-    block 'Description' do
-      find('Description') != ''
-    end
+    block 'Description'
 
     # The description for this post.
     tag 'Description' do

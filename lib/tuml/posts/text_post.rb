@@ -12,9 +12,7 @@ class Tuml
     end
 
     # Rendered if there is a title for this post.
-    block 'Title' do
-      data['title'] != ''
-    end
+    block 'Title'
 
     # The title of this post.
     tag 'Title' do

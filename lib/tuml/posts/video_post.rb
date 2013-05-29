@@ -14,7 +14,7 @@ class Tuml
       data['caption']
     end
 
-    [250,400,500,700].each do |width|
+    [250, 400, 500, 700].each do |width|
       tag "Video-#{width}" do
         data['player'].find {|p| p['width'] == width}['embed_code']
       end
