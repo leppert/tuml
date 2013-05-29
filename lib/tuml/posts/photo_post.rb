@@ -43,14 +43,14 @@ class Tuml
 
     # URL for the photo of this post.
     [500, 400, 250, 100].each do |n|
-      tag "PhotoUrl-#{n}" do
+      tag "PhotoURL-#{n}" do
         data['photos'].
           first['alt_sizes'].
           find(->{{}}) {|p| p['width'] == n}['url']
       end
     end
 
-    tag "PhotoUrl-75sq" do
+    tag "PhotoURL-75sq" do
       data['photos'].
         first['alt_sizes'].
         find(->{{}}) {|p| p['width'] == 75}['url']
